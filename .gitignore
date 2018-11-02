@@ -1,3 +1,4 @@
 ### pytest cache
 .pytest_cache/*
-__pytest__cache/*
+__pycache__/*
+__pycache__/

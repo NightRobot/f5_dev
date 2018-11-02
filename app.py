@@ -26,8 +26,10 @@ member = pool_test.members_s.members
 
 member_collection = members.get_collection()
 for m in member_collection :
-    pprint(m.name)
+    pprint(m.raw)
+    m.ratio = 2
+    m.update()
+    # member_obj = pool_test.members_s.members.load(partition='Common', name=m.name)
+    # print(member_obj.ratio)
 
-member1 = pool_test.members_s.members.load(partition='Common', name='172.16.70.105:22')
-print(member1.name)
 
