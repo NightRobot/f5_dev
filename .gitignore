@@ -3,5 +3,5 @@
 __pycache__/*
 
 ### f5-common-sdk
-.f5-common-python/*
+f5-common-python/*
 
