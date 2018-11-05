@@ -1,0 +1,15 @@
+10/31/2018 09:38:03 +0700 org.archive.jmx.Client ThreadCount: 111
+10/31/2018 09:39:03 +0700 org.archive.jmx.Client ThreadCount: 156
+10/31/2018 09:40:03 +0700 org.archive.jmx.Client ThreadCount: 143
+10/31/2018 09:41:03 +0700 org.archive.jmx.Client ThreadCount: 124
+10/31/2018 09:42:03 +0700 org.archive.jmx.Client ThreadCount: 143
+10/31/2018 09:43:03 +0700 org.archive.jmx.Client ThreadCount: 123
+10/31/2018 09:44:03 +0700 org.archive.jmx.Client ThreadCount: 176
+10/31/2018 09:45:03 +0700 org.archive.jmx.Client ThreadCount: 189
+10/31/2018 09:46:03 +0700 org.archive.jmx.Client ThreadCount: 111
+10/31/2018 09:47:03 +0700 org.archive.jmx.Client ThreadCount: 165
+10/31/2018 09:48:03 +0700 org.archive.jmx.Client ThreadCount: 173
+10/31/2018 09:49:03 +0700 org.archive.jmx.Client ThreadCount: 174
+10/31/2018 09:50:03 +0700 org.archive.jmx.Client ThreadCount: 178
+10/31/2018 09:51:03 +0700 org.archive.jmx.Client ThreadCount: 190
+10/31/2018 09:52:03 +0700 org.archive.jmx.Client ThreadCount: 176
