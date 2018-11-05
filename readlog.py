@@ -1,12 +1,12 @@
 from pprint import pprint
 import re
-infile = r"log.txt"
+file = "log.txt" 
 
 
 important = []
 keep_phrases = ["ThreadCount"]
 
-with open(infile) as f:
+with open(file ,'r') as f:
     f = f.readlines()
 
 for line in f:
