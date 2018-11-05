@@ -5,3 +5,6 @@ __pycache__/*
 ### f5-common-sdk
 f5-common-python/*
 
+### log file
+*.log
+
