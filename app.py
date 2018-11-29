@@ -2,23 +2,23 @@ from f5.bigip import ManagementRoot
 from pprint import pprint
 import time ,os ,logging
 
-
-ipaddress = '172.16.70.105'
+# Test management ip address virtual server BIG IP 10.128.1.145
+ipaddress = '10.128.1.145'
 username = 'admin'
 password = 'password'
-pool_name = "test"
+pool_name = "lab"
 
 # connect to BIGIP management server
 mgmt = ManagementRoot(ipaddress, username, password)
 
-# https://172.16.70.105/mgmt/tm/ltm/
+# https://<ipaddress>/mgmt/tm/ltm/
 ltm = mgmt.tm.ltm
 
 print("---------------------------------------------------")
 print ("management server ",ipaddress)
 print("---------------------------------------------------")
 
-# REST api => https://172.16.70.105/mgmt/tm/ltm/pool
+# REST api => https://<ipaddress>/mgmt/tm/ltm/pool
 # Collection pool
 pools = mgmt.tm.ltm.pools
 
@@ -49,19 +49,19 @@ def readlog(filepath):
     data = text.split(' ')
     return data
 
-clock = 30 # sec
+clock = 5 # sec
 if __name__ == "__main__" :
     # for p in pool_collection :
     now = time.time()
     timer = now + clock
     while(True) :
         now = time.time()
-        if now > timer : 
+        if now > timer :
             timer += clock
             print("pool name : ",pool_test.name)
             print("loadbalance method : ",pool_test.loadBalancingMode)
-            
-            # REST api => https://172.16.70.105/mgmt/tm/ltm/pool/~Common~<pool name>/members
+
+            # REST api => https://<ipaddress>/mgmt/tm/ltm/pool/~Common~<pool name>/members
             # Collection member
             members = pool_test.members_s
             # Resource member
@@ -71,7 +71,7 @@ if __name__ == "__main__" :
             print(member_collection)
             for m in member_collection :
 
-                # REST api => https://172.16.70.105/mgmt/tm/ltm/pool/~Common~<pool name>/members/~Common~<member name>
+                # REST api => https://<ipaddress>/mgmt/tm/ltm/pool/~Common~<pool name>/members/~Common~<member name>
                 print("name : ",m.name)
                 print("address : ",m.address)
                 print("ratio : ",m.ratio)
@@ -79,7 +79,7 @@ if __name__ == "__main__" :
                 print("state : ",m.state)
 
                 print("---------------------------------------------------")
-                
+
                 logdata = readlog("thread.log")
                 print("update ratio :",logdata[len(logdata)-1])
 
@@ -87,10 +87,8 @@ if __name__ == "__main__" :
                 m.ratio = ratio
                 m.update()
                 print("---------------------------------------------------")
-            
-            
+
+
             localtime = time.asctime( time.localtime(time.time()) )
             print ("Local current time :", localtime)
             print("---------------------------------------------------")
-
-
