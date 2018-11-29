@@ -8,12 +8,12 @@ test REST API from **iControl User guide ver. 13.1**
 
 Discovering modules and companents**
 
-GET https://192.168.25.42/mgmt/tm/ltm on browser
+GET https://<f5 ip address>/mgmt/tm/ltm on browser
 
 Or
 
 ```bash
-curl -k -u admin:admin -X GET https://192.168.25.42/mgmt/tm/ltm
+curl -k -u admin:admin -X GET https://<f5 ip address>/mgmt/tm/ltm
 ```
 
 > Note** : A module that is not provisioned on a BIG-IP ystem will not appear in the OUTPUT.
@@ -23,7 +23,7 @@ curl -k -u admin:admin -X GET https://192.168.25.42/mgmt/tm/ltm
 Can use Query parameter in API
 
 ```bash
-curl -k -u admin:admin -X GET https://localhost/mgmt/tm/ltm/pool/?$select=name
+curl -k -u admin:admin -X GET https://<f5 ip address>/mgmt/tm/ltm/pool/?$select=name
 ```
 
 that show name of member in pool
