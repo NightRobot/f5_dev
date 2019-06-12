@@ -22,9 +22,9 @@ logger.addHandler(ch)
 m = 60 # sec
 now = time.time()
 timer = now + m
-while (True): 
+while (True):
     now = time.time()
-    if now > timer : 
+    if now > timer :
         timer += m
         # logger.debug('debug message')
         message = "ThreadCount : "+str(random.randint(50, 200))

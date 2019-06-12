@@ -50,6 +50,8 @@ def readlog(filepath):
     return data
 
 clock = 5 # sec
+compute = 120 # 5 min
+deploy = 180 # 6 min
 if __name__ == "__main__" :
     # for p in pool_collection :
     now = time.time()
